@@ -2,7 +2,7 @@
 
 **Reading Between the Wines**
 **Effective Date:** March 15, 2026
-**Last Updated:** March 15, 2026
+**Last Updated:** August 3, 2026
 
 This Privacy Policy explains how Richard Lee ("I", "me", or "my") collects, uses, and protects your information when you use the Reading Between the Wines mobile application ("the App").
 
@@ -15,6 +15,7 @@ When you create an account and use the App, I collect the following:
 - **Name** — provided by you during registration
 - **Email address** — used to create and manage your account
 - **Profile picture** — optionally uploaded by you
+- **Poll and voting activity** — book nominations you submit, votes you cast, and meeting attendance/confirmations within your book club
 
 I do not collect location data, payment information, or any data beyond what is listed above.
 
@@ -25,8 +26,9 @@ I do not collect location data, payment information, or any data beyond what is 
 Your information is used solely to:
 
 - Create and manage your account
-- Identify you within the App (e.g. displaying your name and profile picture to other members of your wine club)
-- Communicate with you about your account if necessary
+- Identify you within the App (e.g. displaying your name and profile picture to other members of your book club)
+- Operate core App functionality — book nominations, voting, meeting scheduling, and club history
+- Communicate with you about your account if necessary, including push notifications about poll and meeting activity (if enabled)
 
 I do not sell, rent, or share your personal information with third parties for marketing purposes.
 
@@ -40,7 +42,12 @@ Your data is stored on secure servers. I take reasonable technical measures to p
 
 ## 4. Third-Party Services
 
-The App uses third-party services to operate (such as cloud infrastructure and authentication providers). These services may process your data solely as needed to provide the App's functionality. They are not permitted to use your data for their own purposes.
+The App uses the following third-party services to operate. Each processes your data solely as needed to provide its function within the App, and none is permitted to use your data for its own purposes:
+
+- **Resend** — sends transactional email (password reset, club invites, and reminder emails)
+- **AWS S3** — stores uploaded profile photos
+- **Sentry** — receives crash and error reports to help me diagnose and fix bugs
+- **Expo** — delivers push notifications to your device
 
 I do not currently integrate with third-party platforms such as Google Calendar. If such integrations are added in the future, this policy will be updated accordingly.
 
@@ -51,7 +58,7 @@ I do not currently integrate with third-party platforms such as Google Calendar.
 You may at any time:
 
 - **Update** your name or profile picture within the App
-- **Delete your account** by contacting me at leerw4@gmail.com — this will result in permanent deletion of your personal data
+- **Delete your account** directly within the App (Profile → Delete Account), or by contacting me at leerw4@gmail.com — this will result in permanent deletion of your personal data
 
 ---
 
