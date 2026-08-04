@@ -2,7 +2,7 @@
 
 **Reading Between the Wines**
 **Effective Date:** March 15, 2026
-**Last Updated:** March 15, 2026
+**Last Updated:** August 4, 2026
 
 These Terms of Service ("Terms") govern your use of the Reading Between the Wines mobile application ("the App"), operated by Richard Lee ("I", "me", or "my"). By creating an account or using the App, you agree to these Terms.
 
@@ -10,7 +10,7 @@ These Terms of Service ("Terms") govern your use of the Reading Between the Wine
 
 ## 1. Eligibility
 
-You must be at least 21 years of age to use the App. By using the App, you represent and warrant that you meet this requirement.
+You must be at least 17 years of age to use the App. By using the App, you represent and warrant that you meet this requirement.
 
 ---
 

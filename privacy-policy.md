@@ -2,7 +2,7 @@
 
 **Reading Between the Wines**
 **Effective Date:** March 15, 2026
-**Last Updated:** August 3, 2026
+**Last Updated:** August 4, 2026
 
 This Privacy Policy explains how Richard Lee ("I", "me", or "my") collects, uses, and protects your information when you use the Reading Between the Wines mobile application ("the App").
 
@@ -64,7 +64,7 @@ You may at any time:
 
 ## 6. Age Requirement
 
-The App is intended for users who are 21 years of age or older. By using the App, you confirm that you meet this requirement. I do not knowingly collect information from anyone under 21.
+The App is intended for users who are 17 years of age or older. By using the App, you confirm that you meet this requirement. I do not knowingly collect information from anyone under 17.
 
 ---
 
