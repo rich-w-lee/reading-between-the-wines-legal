@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Between the Wines</title>
+<meta name="description" content="A book club app for people who read between the wines. Pick the book, pour the wine, cast your vote.">
+<link rel="icon" href="assets/icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reading Between the Wines">
+<meta property="og:description" content="A book club app for people who read between the wines.">
+<meta property="og:image" content="assets/icon.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* Design tokens — mirrored from apps/mobile/theme.ts. Keep in sync. */
+  :root {
+    --pink:        #E8A0B8;
+    --pink-deep:   #C9728F;
+    --pink-light:  #F2C0D0;
+    --pink-pale:   #FEF5F8;
+    --pink-bg:     #FDF0F4;
+    --ink:         #2A1520;
+    --rose-shine:  #FAD8E4;
+    --muted:       #B08898;
+    --muted-deep:  #8A7A80;
+    --soft-white:  #FFFCFD;
+    --border:      #F5E0E8;
+    --hero:        #D9849E;
+
+    --space-sm:  8px;
+    --space-md:  12px;
+    --space-base:16px;
+    --space-lg:  20px;
+    --space-xl:  24px;
+    --space-xxl: 32px;
+    --space-xxxl:40px;
+
+    --radius-card:  10px;
+    --radius-large: 14px;
+    --radius-pill:  20px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--pink-bg);
+    color: var(--ink);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: var(--space-xxxl) var(--space-xl) var(--space-xxl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ---- Hero ---- */
+
+  .mark {
+    width: 104px;
+    height: 104px;
+    border-radius: 23px;
+    display: block;
+    box-shadow: 0 6px 20px rgba(42, 21, 32, 0.14);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: var(--space-xl) 0 0;
+  }
+
+  .tagline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(18px, 4.5vw, 22px);
+    line-height: 1.4;
+    color: var(--muted);
+    margin: var(--space-md) 0 0;
+    max-width: 28ch;
+  }
+
+  .rule {
+    width: 56px;
+    height: 1px;
+    background: var(--pink-light);
+    border: 0;
+    margin: var(--space-xl) 0 0;
+  }
+
+  /* ---- App Store badge ---- */
+
+  .badge {
+    display: inline-block;
+    margin-top: var(--space-xl);
+    border-radius: 9px;
+    transition: transform 140ms ease, box-shadow 140ms ease;
+  }
+
+  .badge img {
+    display: block;
+    height: 54px;
+    width: auto;
+  }
+
+  .badge:hover,
+  .badge:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(42, 21, 32, 0.18);
+  }
+
+  /* ---- Feature cards ---- */
+
+  .features {
+    list-style: none;
+    margin: var(--space-xxl) 0 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .features li {
+    background: var(--soft-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    padding: var(--space-lg) var(--space-base);
+    box-shadow: 0 2px 8px rgba(42, 21, 32, 0.06);
+  }
+
+  .features h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 11.5px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: var(--pink-deep);
+    margin: 0;
+  }
+
+  .features p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted-deep);
+    margin: var(--space-sm) 0 0;
+  }
+
+  /* ---- Footer ---- */
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm) var(--space-lg);
+    margin: 0 0 var(--space-md);
+  }
+
+  a {
+    color: var(--pink-deep);
+    text-decoration: none;
+  }
+
+  .links a {
+    font-size: 13px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+  }
+
+  .links a:hover,
+  a:focus-visible {
+    border-bottom-color: var(--pink-deep);
+  }
+
+  .copyright {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  @media (max-width: 520px) {
+    main { padding-top: var(--space-xxl); }
+    .features { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <img class="mark" src="assets/icon.png" alt="Reading Between the Wines app icon: a glass of red wine resting on a book" width="104" height="104">
+
+  <h1>Reading Between the Wines</h1>
+  <p class="tagline">A book club for people who take the wine as seriously as the reading.</p>
+
+  <hr class="rule">
+
+  <a class="badge"
+     href="https://apps.apple.com/us/app/reading-between-the-wines/id6797369364">
+    <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+  </a>
+
+  <ul class="features">
+    <li>
+      <h2>Nominate</h2>
+      <p>Everyone puts a book on the table.</p>
+    </li>
+    <li>
+      <h2>Vote</h2>
+      <p>The club picks the next read together.</p>
+    </li>
+    <li>
+      <h2>Gather</h2>
+      <p>Set the date, pour the wine, discuss.</p>
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <nav class="links">
+    <a href="support.html">Support</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+  </nav>
+  <p class="copyright">Reading Between the Wines</p>
+</footer>
+
+</body>
+</html>
