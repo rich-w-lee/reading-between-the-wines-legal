@@ -136,6 +136,56 @@
     box-shadow: 0 5px 16px rgba(42, 21, 32, 0.18);
   }
 
+  .store-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+
+  .store-links .badge {
+    margin-top: 0;
+  }
+
+  /* Android has no public listing yet — a closed-testing link, so it gets a plain
+     button rather than the official "GET IT ON Google Play" badge, which would
+     imply a live store listing. */
+  .android-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    padding: 0 var(--space-lg);
+    background: var(--ink);
+    color: var(--soft-white);
+    border-radius: 9px;
+    text-decoration: none;
+    transition: transform 140ms ease, box-shadow 140ms ease;
+  }
+
+  .android-button .eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--rose-shine);
+  }
+
+  .android-button .label {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .android-button:hover,
+  .android-button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(42, 21, 32, 0.18);
+  }
+
   /* ---- Feature cards ---- */
 
   .features {
@@ -230,10 +280,18 @@
 
   <hr class="rule">
 
-  <a class="badge"
-     href="https://apps.apple.com/us/app/reading-between-the-wines/id6797369364">
-    <img src="assets/app-store-badge.svg" alt="Download on the App Store">
-  </a>
+  <div class="store-links">
+    <a class="badge"
+       href="https://apps.apple.com/us/app/reading-between-the-wines/id6797369364">
+      <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+    </a>
+
+    <a class="android-button"
+       href="https://play.google.com/apps/testing/com.readingbetweenthewines.app">
+      <span class="eyebrow">Android &middot; Closed Beta</span>
+      <span class="label">Join the Beta</span>
+    </a>
+  </div>
 
   <ul class="features">
     <li>
