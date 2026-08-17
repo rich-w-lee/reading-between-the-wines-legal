@@ -257,8 +257,14 @@
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="terms-of-service.html">Terms of Service</a>
   </nav>
-  <p class="copyright">Reading Between the Wines</p>
+  <p class="copyright">&copy; <span id="year">2026</span> Richard Lee</p>
 </footer>
+
+<script>
+  // The year in the markup is the no-JS fallback; this keeps it current without a redeploy.
+  // Jekyll's site.time would only update when the site is rebuilt, so it's resolved here instead.
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
