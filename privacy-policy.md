@@ -1,7 +1,6 @@
 # Privacy Policy
 
-**Reading Between the Wines**
-**Effective Date:** March 15, 2026
+**Effective Date:** March 15, 2026  
 **Last Updated:** August 4, 2026
 
 This Privacy Policy explains how Richard Lee ("I", "me", or "my") collects, uses, and protects your information when you use the Reading Between the Wines mobile application ("the App").

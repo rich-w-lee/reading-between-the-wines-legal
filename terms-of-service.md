@@ -1,7 +1,6 @@
 # Terms of Service
 
-**Reading Between the Wines**
-**Effective Date:** March 15, 2026
+**Effective Date:** March 15, 2026  
 **Last Updated:** August 4, 2026
 
 These Terms of Service ("Terms") govern your use of the Reading Between the Wines mobile application ("the App"), operated by Richard Lee ("I", "me", or "my"). By creating an account or using the App, you agree to these Terms.

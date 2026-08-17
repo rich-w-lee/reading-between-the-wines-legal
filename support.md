@@ -1,7 +1,5 @@
 # Support
 
-**Reading Between the Wines**
-
 Need help with the App, have a question, or found a bug? Contact me directly:
 
 **Email:** [leerw4@gmail.com](mailto:leerw4@gmail.com)
